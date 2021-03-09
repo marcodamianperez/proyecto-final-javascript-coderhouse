@@ -1,0 +1,14 @@
+{
+  "name": "proyectofinalmarcoperez",
+  "version": "1.0.0",
+  "description": "Portal de compra-venta de vehículos.",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss dist/css/main.css --watch"
+  },
+  "author": "Marco Pérez",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

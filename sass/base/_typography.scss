@@ -1,0 +1,51 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+.navbar {
+    &__title {
+        color: $color-white;
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        span {
+            color: $color-red;
+            font-style: italic;
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+
+    &__title {
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 3.4rem;
+        padding: 4rem 0;
+    }
+}
+
+.vehicle-type {
+    &__title {
+        font-size: 3.4rem;
+        text-transform: capitalize;
+    }
+
+    &__img {
+        color: $color-red;
+        font-size: 4rem;
+    }
+
+    &__name {
+        font-size: 2.6rem;
+        color: $color-dark-grey;
+    }
+}

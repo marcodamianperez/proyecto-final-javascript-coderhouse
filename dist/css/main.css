@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.navbar__title {
+  color: #f1f1f1;
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navbar__title span {
+  color: crimson;
+  font-style: italic;
+}
+
+.hero {
+  text-align: center;
+}
+.hero__title {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  font-size: 3.4rem;
+  padding: 4rem 0;
+}
+
+.vehicle-type__title {
+  font-size: 3.4rem;
+  text-transform: capitalize;
+}
+.vehicle-type__img {
+  color: crimson;
+  font-size: 4rem;
+}
+.vehicle-type__name {
+  font-size: 2.6rem;
+  color: #121212;
+}
+
+.navbar {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.vehicle-type {
+  background-color: rgba(241, 241, 241, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.vehicle-type__item {
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  padding: 3rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.vehicle-type__name {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
