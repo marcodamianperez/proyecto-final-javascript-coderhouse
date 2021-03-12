@@ -1,0 +1,12 @@
+.footer {
+    background-color: $color-dark-grey;
+    padding-top: 3rem;
+
+    &__flex-container {
+        margin: 2rem 0;
+    }
+
+    &__items:first-child {
+        margin-bottom: 1.6rem;
+    }
+}

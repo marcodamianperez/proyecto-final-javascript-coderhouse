@@ -10,12 +10,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg-hero.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+    padding: 4rem 0;
 }
 
 .vehicle-type {
@@ -27,9 +22,9 @@
 
     &__item {
         background-color: $color-white;
-        border-radius: 2rem;
-        padding: 3rem;
-        width: 70%;
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 60%;
         margin: 0 auto;
         margin-top: 3rem;
     }
@@ -37,4 +32,11 @@
     &__name {
         margin-top: 1rem;
     }
+}
+
+.publish {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
 }

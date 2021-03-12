@@ -3,15 +3,17 @@ html {
 }
 
 body {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
+
     &__title {
         color: $color-white;
         font-size: 3.4rem;
         text-transform: uppercase;
         text-decoration: none;
+        font-weight: 700;
         
         span {
             color: $color-red;
@@ -21,19 +23,22 @@ body {
 }
 
 .hero {
+
     text-align: center;
 
     &__title {
         font-weight: 300;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        line-height: 4.4rem;
         text-transform: uppercase;
         color: $color-white;
         font-size: 3.4rem;
-        padding: 4rem 0;
+        margin-bottom: 4rem;
     }
 }
 
 .vehicle-type {
+
     &__title {
         font-size: 3.4rem;
         text-transform: capitalize;
@@ -47,5 +52,84 @@ body {
     &__name {
         font-size: 2.6rem;
         color: $color-dark-grey;
+    }
+}
+
+.publish {
+
+    &__text {
+        color: $color-white;
+        font-size: 1.4rem;
+        text-align: right;
+        margin-left: 3rem;
+    }
+}
+
+.features {
+
+    &__section {
+        text-align: center;
+    }
+
+    &__circle {
+        color: $color-light-grey;
+        font-size: 2.6rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: $color-dark-grey;
+    }
+}
+
+.footer {
+
+    &__title {
+        text-align: center;
+        color: $color-white;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        span {
+            color: $color-red;
+            font-style: italic;
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-top: 0.4rem;
+        color: $color-white;
+        letter-spacing: 1px;
+    }
+
+    &__items {
+        list-style: none;
+    }
+
+    &__item {
+        padding: 0.2rem 0;
+    }
+
+    &__link {
+        color: $color-white;
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
+
+    &__credits {
+        background-color: $color-dark-grey;
+        color: $color-white;
+        text-align: center;
+        text-transform: uppercase;
+        border-top: 2px solid $color-red;
+        padding: 2rem 0;
+
+        .author {
+            color: $color-white;
+        }
     }
 }

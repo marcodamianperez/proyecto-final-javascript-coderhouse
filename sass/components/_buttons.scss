@@ -1,0 +1,26 @@
+.btn {
+    
+    background-color: $color-red;
+    color: $color-white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &--normal {
+        padding: 1.4rem 1.2rem;
+        font-size: 1.6rem;
+        border-radius: 1rem;
+    }
+
+    &--small {
+        padding: 0.5rem 0.9rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+        display: inline-block;
+    }
+
+    .fa-plus-circle {
+        margin-right: 0.8rem;
+    }
+}

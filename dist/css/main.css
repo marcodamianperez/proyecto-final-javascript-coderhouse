@@ -10,12 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar__title {
@@ -23,6 +28,7 @@ body {
   font-size: 3.4rem;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
 }
 .navbar__title span {
   color: crimson;
@@ -34,11 +40,12 @@ body {
 }
 .hero__title {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 4.4rem;
   text-transform: uppercase;
   color: #f1f1f1;
   font-size: 3.4rem;
-  padding: 4rem 0;
+  margin-bottom: 4rem;
 }
 
 .vehicle-type__title {
@@ -54,6 +61,126 @@ body {
   color: #121212;
 }
 
+.publish__text {
+  color: #f1f1f1;
+  font-size: 1.4rem;
+  text-align: right;
+  margin-left: 3rem;
+}
+
+.features__section {
+  text-align: center;
+}
+.features__circle {
+  color: #e5e5e5;
+  font-size: 2.6rem;
+}
+.features__text {
+  font-size: 1.6rem;
+  color: #121212;
+}
+
+.footer__title {
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footer__title span {
+  color: crimson;
+  font-style: italic;
+}
+.footer__subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+  color: #f1f1f1;
+  letter-spacing: 1px;
+}
+.footer__items {
+  list-style: none;
+}
+.footer__item {
+  padding: 0.2rem 0;
+}
+.footer__link {
+  color: #f1f1f1;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.footer__credits {
+  background-color: #121212;
+  color: #f1f1f1;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 2px solid crimson;
+  padding: 2rem 0;
+}
+.footer__credits .author {
+  color: #f1f1f1;
+}
+
+.btn {
+  background-color: crimson;
+  color: #f1f1f1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn--normal {
+  padding: 1.4rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+}
+.btn--small {
+  padding: 0.5rem 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+.btn .fa-plus-circle {
+  margin-right: 0.8rem;
+}
+
+.features {
+  background-color: #e5e5e5;
+  padding: 4rem 0;
+}
+.features__item {
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  padding: 4rem;
+}
+.features__item:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.features__circle {
+  border: none;
+  border-radius: 50%;
+  background-color: crimson;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background-color: #121212;
+  padding-top: 3rem;
+}
+.footer__flex-container {
+  margin: 2rem 0;
+}
+.footer__items:first-child {
+  margin-bottom: 1.6rem;
+}
+
 .navbar {
   background-color: #121212;
   display: flex;
@@ -66,12 +193,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg-hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
+  padding: 4rem 0;
 }
 
 .vehicle-type {
@@ -83,14 +205,21 @@ body {
 }
 .vehicle-type__item {
   background-color: #f1f1f1;
-  border-radius: 2rem;
-  padding: 3rem;
-  width: 70%;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 60%;
   margin: 0 auto;
   margin-top: 3rem;
 }
 .vehicle-type__name {
   margin-top: 1rem;
+}
+
+.publish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

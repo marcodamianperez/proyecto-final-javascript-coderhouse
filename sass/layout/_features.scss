@@ -1,0 +1,27 @@
+.features {
+    background-color: $color-light-grey;
+    padding: 4rem 0;
+
+    &__item {
+        background-color: $color-white;
+        border-radius: 2rem;
+        padding: 4rem;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__circle {
+        border: none;
+        border-radius: 50%;
+        background-color: $color-red;
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+}
