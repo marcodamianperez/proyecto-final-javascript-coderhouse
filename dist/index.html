@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='es'>
 <head>
 
     <!-- meta -->
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Marco Pérez">
-    <meta name="description" content="AutoTrade, el mejor sitio para encontrar el auto de tus sueños">
+    <meta name="description" content="AutoTrade, el mejor portal para encontrar el auto de tus sueños">
     <meta name="keywords" content="autos, vehículos, motos, camionetas, venta, compra, autotrade, argentina, publicar, portal">
 
     <!-- fonts -->
@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <div class="header">
+    <header>
         <nav class="navbar">
             <a href="index.html" class="navbar__title">Auto<span>Trade</span></a>
         </nav>
@@ -31,7 +31,7 @@
             <div class="container">
                 <h1 class="hero__title">Bienvenido a tu próximo auto</h1>
 
-                <div class="hero__content">
+                <div class="hero__flex-container">
 
                     <div class="publish">
                         <a href="publish.html" class="btn btn--normal">
@@ -44,25 +44,31 @@
                     <div class="vehicle-type">
                         <div class="vehicle-type__title">¿Qué buscás?</div>
                         <div class="vehicle-type__container">
-                            <div class="vehicle-type__item">
-                                <i class="fas fa-car vehicle-type__img"></i>
-                                <p class="vehicle-type__name">Autos</p>
-                            </div>
-                            <div class="vehicle-type__item">
-                                <i class="fas fa-truck-pickup vehicle-type__img"></i>
-                                <p class="vehicle-type__name">Utilitarios</p>
-                            </div>
-                            <div class="vehicle-type__item">
-                                <i class="fas fa-motorcycle vehicle-type__img"></i>
-                                <p class="vehicle-type__name">Motos</p>
-                            </div>
+                            <a href="search.html" class="vehicle-type__item">
+                                <!-- <div class="vehicle-type__item"> -->
+                                    <i class="fas fa-car vehicle-type__img"></i>
+                                    <p class="vehicle-type__name">Autos</p>
+                                <!-- </div> -->
+                            </a>
+                            <a href="search.html" class="vehicle-type__item">
+                                <!-- <div class="vehicle-type__item"> -->
+                                    <i class="fas fa-truck-pickup vehicle-type__img"></i>
+                                    <p class="vehicle-type__name">Utilitarios</p>
+                                <!-- </div> -->
+                            </a>
+                            <a href="search.html" class="vehicle-type__item">
+                                <!-- <div class="vehicle-type__item"> -->
+                                    <i class="fas fa-motorcycle vehicle-type__img"></i>
+                                    <p class="vehicle-type__name">Motos</p>
+                                <!-- </div> -->
+                            </a>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="features">
         <div class="container">
@@ -115,9 +121,9 @@
                 </ul>
     
                 <ul class="footer__items">
-                    <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Correo electrónico</a></li>
+                    <li class="footer__item"><a href="https://www.instagram.com/" target="_blank" class="footer__link">Instagram</a></li>
+                    <li class="footer__item"><a href="https://www.facebook.com/" target="_blank" class="footer__link">Facebook</a></li>
+                    <li class="footer__item"><a href="mailto:contacto@autotrade.com" class="footer__link">Correo electrónico</a></li>
                 </ul>
             </div>
 
@@ -126,8 +132,9 @@
         <p class="footer__credits">Diseño y desarrollo: <a href="https://github.com/marcodamianperez" target="_blank" class="author">Marco Pérez</a></p>
     </footer>
     
-    <script defer src="js/class.js"></script>
+    <!-- scripts -->
+    <!-- <script defer src="js/class.js"></script>
     <script defer src="js/objects.js"></script>
-    <script defer src="js/app.js"></script>
+    <script defer src="js/app.js"></script> -->
 </body>
 </html>

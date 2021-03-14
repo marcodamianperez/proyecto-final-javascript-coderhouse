@@ -4,3 +4,10 @@ $color-dark-grey-2: #2a2a2a;
 $color-light-grey: #e5e5e5;
 $color-white: #f1f1f1;
 $color-red: crimson;
+$color-grey-font: #666;
+
+// Media queries
+// Actual styles from 0xp tp 600px
+$tablet-portrait: 600px; // from 600px to 900px
+$tablet-landscape: 900px; // from 900px to 1200px
+$desktop: 1200px // from 1200px to above

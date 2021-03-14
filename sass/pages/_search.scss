@@ -1,0 +1,46 @@
+.showcase {
+    background-color: $color-light-grey;
+    padding: 3rem 0;
+}
+
+.car {
+    background-color: $color-white;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: $color-grey-font;
+    font-size: 1.4rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    &__image {
+        
+        img {
+            border-radius: 1rem;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    &__brand,
+    &__model,
+    &__price {
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+
+    &__price {
+        color: $color-red;
+    }
+
+    &__year {
+        font-weight: 700;
+    }
+
+}

@@ -11,6 +11,11 @@
         padding: 1.4rem 1.2rem;
         font-size: 1.6rem;
         border-radius: 1rem;
+
+        @media (min-width: $tablet-landscape) {
+            padding: 1.2rem 1rem;
+            font-size: 1.4rem;
+        }
     }
 
     &--small {
@@ -18,6 +23,10 @@
         font-size: 1.2rem;
         border-radius: 1rem;
         display: inline-block;
+
+        @media (min-width: $tablet-landscape) {
+            padding: 0.4rem 0.8rem;
+        }
     }
 
     .fa-plus-circle {

@@ -2,13 +2,39 @@
     background-color: $color-light-grey;
     padding: 4rem 0;
 
+    &__flex-container {
+        text-align: center;
+
+        @media (min-width: $tablet-landscape) {
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: $color-dark-grey;
+
+        @media (min-width: $tablet-landscape) {
+            font-size: 1.4rem;
+        }
+    }
+
     &__item {
         background-color: $color-white;
         border-radius: 2rem;
         padding: 4rem;
 
+        @media (min-width: $tablet-landscape) {
+            padding: 3rem 2rem;
+        }
+
         &:not(:last-child) {
             margin-bottom: 4rem;
+
+            @media (min-width: $tablet-landscape) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -23,5 +49,13 @@
         align-items: center;
         margin: 0 auto;
         margin-bottom: 2rem;
+        color: $color-light-grey;
+        font-size: 2.6rem;
+
+        @media (min-width: $tablet-landscape) {
+            width: 6rem;
+            height: 6rem;
+            font-size: 1.8rem;
+        }
     }
 }
