@@ -11,9 +11,19 @@ html {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 96rem;
   margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .container {
+    width: 85%;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    width: 80%;
+  }
 }
 
 html {
@@ -356,22 +366,91 @@ body {
   padding: 2rem;
   color: #666;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 2px solid transparent;
+  transition: border 0.1s ease-in-out;
+}
+.car:hover {
+  border: 2px solid crimson;
 }
 .car:not(:last-child) {
   margin-bottom: 3rem;
 }
+@media (min-width: 600px) {
+  .car:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 600px) {
+  .car {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 1rem;
+  }
+}
+.car__image {
+  margin: 0 auto;
+  max-width: 30rem;
+  width: 100%;
+  height: 20rem;
+}
+@media (min-width: 600px) {
+  .car__image {
+    max-width: 20rem;
+    height: 15rem;
+    margin: 0;
+  }
+}
 .car__image img {
   border-radius: 1rem;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .car__description {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
+@media (min-width: 600px) {
+  .car__description {
+    margin-top: 0;
+  }
+}
+.car__info {
+  width: 60%;
+}
+@media (min-width: 600px) {
+  .car__info {
+    font-size: 1.3rem;
+  }
+}
+.car__data {
+  width: 40%;
+  text-align: right;
+}
+@media (min-width: 600px) {
+  .car__data {
+    font-size: 1.3rem;
+  }
+}
+.car__version {
+  margin-bottom: 1rem;
+}
 .car__brand, .car__model, .car__price {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+@media (min-width: 600px) {
+  .car__brand, .car__model, .car__price {
+    font-size: 1.4rem;
+  }
 }
 .car__price {
   color: crimson;

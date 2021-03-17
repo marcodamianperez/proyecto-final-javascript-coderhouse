@@ -6,7 +6,7 @@ class Vehiculo {
         this.marca = marca.trim();
         this.modelo = modelo.trim();
         this.version = version.trim();
-        this.combustible = combustible;
+        this.validarCombustible(combustible)
         this.anio = anio;
         this.kilometros = kilometros;
         this.validarPrecio(precio.trim());
@@ -24,6 +24,29 @@ class Vehiculo {
             this.precio = 'Consultar';
         } else {
             this.precio = precio;
+        }
+    }
+
+    validarCombustible(combustible) {
+        switch (combustible) {
+            case 1:
+                this.combustible = 'nafta';
+                break;
+            case 2:
+                this.combustible = 'diesel';
+                break;
+            case 3:
+                this.combustible = 'gnc';
+                break;
+            case 4:
+                this.combustible = 'eléctrico';
+                break;
+            case 5:
+                this.combustible = 'híbrido';
+                break;
+            default:
+                this.combustible = 'otro';
+                break;
         }
     }
 }

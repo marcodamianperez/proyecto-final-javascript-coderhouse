@@ -1,0 +1,6 @@
+Nombre del proyecto: AutoTrade
+
+AutoTrade es una aplicación web de compra-venta de vehículos en donde el usuario puede publicar su propio vehículo a vender así como también buscar entre los vehículos
+publicados y filtrarlos por marca, modelo, año, precio, etc.
+
+Diseño y desarrollo por Marco Pérez para el proyecto final del curso de JavaScript en CoderHouse.

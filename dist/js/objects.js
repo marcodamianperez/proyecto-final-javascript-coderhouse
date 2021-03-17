@@ -26,6 +26,8 @@ const moto4 = new Vehiculo('moto', 'suzuki', 'dr', '350 r', 1, 1992, 8000, '3400
 En estos arrays se guardan todos los vehículos (objetos) publicados.
 Decidí serparar los arrays por cuestiones de rendimiento, si el usuario solicita sólo motos, sólo se recorre el array de motos, en cambio si estuviesen todos los tipos de vehículos en un mismo array, tendía que recorrerlo completo y filtrar los que no necesito.
 */
-let listaAutos = [auto1, auto2, auto3, auto4, auto5, auto6, auto7];
-let listaUtilitarios = [utilitario1, utilitario2, utilitario3, utilitario4, utilitario5];
-let listaMotos = [moto1, moto2, moto3, moto4];
+// let listaAutos = [auto1, auto2, auto3, auto4, auto5, auto6, auto7];
+// let listaUtilitarios = [utilitario1, utilitario2, utilitario3, utilitario4, utilitario5];
+// let listaMotos = [moto1, moto2, moto3, moto4];
+
+const listaVehiculos = [auto1, auto2, auto3, auto4, auto5, auto6, auto7, utilitario1, utilitario2, utilitario3, utilitario4, utilitario5, moto1, moto2, moto3, moto4];

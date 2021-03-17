@@ -11,7 +11,15 @@ html {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 96rem;
     margin: 0 auto;
+
+    @media (min-width: $tablet-portrait) {
+        width: 85%;
+    }
+
+    @media (min-width: $tablet-landscape) {
+        width: 80%;
+    }
 }
