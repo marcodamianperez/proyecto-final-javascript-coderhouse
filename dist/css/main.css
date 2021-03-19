@@ -459,4 +459,8 @@ body {
   font-weight: 700;
 }
 
+.filter option {
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=main.css.map */

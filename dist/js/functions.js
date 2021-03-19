@@ -1,7 +1,6 @@
 // VARIABLES GLOBALES
 const type = localStorage.getItem('type');
 const select = document.getElementById('brand');
-const vehicles = listaVehiculos.filter(vehicle => vehicle.tipo === type); // Array de vehículos que seleccionó el usuario
 
 // Funcion que permite publicar un nuevo vehículo
 // let publicar = () => {
@@ -46,25 +45,25 @@ const vehicles = listaVehiculos.filter(vehicle => vehicle.tipo === type); // Arr
 // }
 
 // Función que genera el html que se va a insertar dinámicamente en la página search.html
-let generarHtml = listaVehiculos => {
+let generateHtml = (filteredPublications) => {
     let html = '';
-    for (const vehiculo of listaVehiculos) {
+    for (const publication of filteredPublications) {
         html += `
                 <div class="car">
                     <div class="car__image">
-                        <img src="img/206.jpg" alt="auto">
+                        <img src="${publication.images[0]}" alt="auto">
                     </div>
                     <div class="car__description">
                         <div class="car__info">
-                            <span class="car__brand">${vehiculo.marca}</span>
-                            <span class="car__model">${vehiculo.modelo}</span>
-                            <div class="car__version">${vehiculo.version}</div>
-                            <div class="car__millage">${vehiculo.kilometros} Km</div>
-                            <div class="car__location">${vehiculo.ubicacion}</div>
+                            <span class="car__brand">${publication.vehicleInfo.brand}</span>
+                            <span class="car__model">${publication.vehicleInfo.model}</span>
+                            <div class="car__version">${publication.vehicleInfo.version}</div>
+                            <div class="car__millage">${publication.vehicleInfo.mileaje} Km</div>
+                            <div class="car__location">${publication.sellerInfo.location.city}, ${publication.sellerInfo.location.province}</div>
                         </div>
                         <div class="car__data">
-                            <div class="car__price">$ ${vehiculo.precio}</div>
-                            <span class="car__fuel">${vehiculo.combustible}</span> | <span class="car__year">${vehiculo.anio}</span>
+                            <div class="car__price">$ ${publication.vehicleInfo.price}</div>
+                            <span class="car__fuel">${publication.vehicleInfo.fuel}</span> | <span class="car__year">${publication.vehicleInfo.year}</span>
                         </div>
                     </div>
                 </div>
@@ -75,39 +74,47 @@ let generarHtml = listaVehiculos => {
 
 // Función que genera dinámicamente el select con las marcas de los vehículos en función de la disponibilidad de los mismos publicados
 let generateSelect = () => {
+    const currentPublications = publications.filter(publication => publication.vehicleInfo.type === type);
     let brands = [];
-    vehicles.forEach(vehicle => {
-        brands.push(vehicle.marca);
+    currentPublications.forEach(publication => {
+        brands.push(publication.vehicleInfo.brand);
     });
     brands = Array.from(new Set(brands));
 
     let options = '';
-    brands.forEach(option => {
-        options += `<option value="${option}">${option}</option>`;
+    brands.forEach(brand => {
+        options += `<option value="${brand}">${brand}</option>`;
     });
 
     select.innerHTML += options;
 }
 
 // Función que muestra el listado de vehículos disponibles, según lo que el usuario eligió ver (auto, utilitario o moto)
-let verListado = () => {
-    let html = generarHtml(vehicles);
+let showPublications  = () => {
+    const currentPublications = publications.filter(publication => publication.vehicleInfo.type === type);
+    const html = generateHtml(currentPublications);
 
     const showcase = document.getElementById('showcase');
     showcase.innerHTML = html;
 }
 
 const filterByBrand = () => {
-    const marca = select.value;
-    let listaFiltrada = vehicles.filter(vehiculo => vehiculo.marca === marca);
+    const brand = select.value;
 
-    const showcase = document.getElementById('showcase');
-    const html = generarHtml(listaFiltrada);
-    showcase.innerHTML = html;
+    if (brand === 'all') {
+        showPublications();
+    } else {
+        let filteredPublications = publications.filter(publication => publication.vehicleInfo.brand === brand);
+        const html = generateHtml(filteredPublications);
+    
+        const showcase = document.getElementById('showcase');
+        showcase.innerHTML = html;
+    }
+
 }
 
 // LISTENERS
 select.addEventListener('change', filterByBrand);
 
 generateSelect();
-verListado();
+showPublications();
