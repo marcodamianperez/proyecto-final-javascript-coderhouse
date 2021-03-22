@@ -12,7 +12,7 @@ html {
 
 .container {
   width: 90%;
-  max-width: 96rem;
+  max-width: 86rem;
   margin: 0 auto;
 }
 @media (min-width: 600px) {
@@ -261,33 +261,33 @@ body {
   }
 }
 
-.publish {
+.publish-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
 }
 @media (min-width: 900px) {
-  .publish {
+  .publish-section {
     flex-direction: column;
     justify-content: center;
     width: 30%;
     margin-bottom: 0;
   }
 }
-.publish__text {
+.publish-section__text {
   color: #f1f1f1;
   font-size: 1.4rem;
   text-align: right;
   margin-left: 3rem;
 }
 @media (min-width: 600px) {
-  .publish__text {
+  .publish-section__text {
     font-size: 1.6rem;
   }
 }
 @media (min-width: 900px) {
-  .publish__text {
+  .publish-section__text {
     text-align: center;
     margin-top: 3rem;
     margin-left: 0;
@@ -353,6 +353,95 @@ body {
   .vehicle-type__name {
     font-size: 2rem;
   }
+}
+
+.publish {
+  background-color: #e5e5e5;
+  padding: 3rem 0;
+}
+.publish .center-text {
+  text-align: center;
+}
+.publish__title {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+.publish__text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.form__card {
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  color: #666;
+}
+.form__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media (min-width: 900px) {
+  .form__card .btn {
+    width: 15rem;
+  }
+}
+.form__header {
+  color: #f1f1f1;
+  background-color: crimson;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+}
+.form__field:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__label {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.form__radio-label {
+  margin-right: 1.4rem;
+  font-size: 1.6rem;
+}
+@media (min-width: 900px) {
+  .form__radio-label {
+    font-size: 1.4rem;
+  }
+}
+.form__check-label {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}
+@media (min-width: 900px) {
+  .form__check-label {
+    font-size: 1.4rem;
+  }
+}
+.form__state {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.form__select, .form__input-text, .form__textarea {
+  border: none;
+  background-color: #e5e5e5;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  width: 20rem;
+  font-family: "Poppins", sans-serif;
+  color: #666;
+}
+.form__textarea {
+  margin-top: 1rem;
+  width: 100%;
+  height: 20rem;
+  resize: none;
+}
+
+.mandatory {
+  color: red;
 }
 
 .showcase {
