@@ -31,7 +31,11 @@
 
     <div class="publish">
         <div class="container">
-            <div class="publish__card center-text">
+            <a href="index.html" class="btn btn--small margin-bottom-small">
+                <i class="fas fa-arrow-circle-left"></i>
+                Volver
+            </a>
+            <div class="center-text">
                 <h1 class="publish__title">Publicá tu vehículo GRATIS</h1>
                 <p class="publish__text">
                     Publicá tu vehículo en AutoTrade completando los datos del siguiente formulario. Al finalizar presioná el botón Publicar y listo!
@@ -50,20 +54,20 @@
                     <!-- State (used or new) -->
                     <div class="form__field">                        
                         <input type="radio" name="state" id="used">
-                        <label for="used" class="form__radio-label">Usado</label>
+                        <label for="used" value="used" class="form__radio-label">Usado</label>
                         
                         <input type="radio" name="state" id="new">
-                        <label for="new" class="form__radio-label">0 Km</label>                        
+                        <label for="new" value="new" class="form__radio-label">0 Km</label>                        
                     </div>
 
                     <!-- Type (car, pickup or motorcycle) -->
                     <div class="form__field">
                         <label for="type" class="form__label">Tipo:</label>
                         <select class="form__select" id="type">
-                            <option value="selectType">Seleccione...</option>
-                            <option value="car">Auto</option>
+                            <option value="selectType" hidden>Seleccione...</option>
+                            <!-- <option value="car">Auto</option>
                             <option value="pickup">Utilitario</option>
-                            <option value="motorcycle">Moto</option>
+                            <option value="motorcycle">Moto</option> -->
                         </select>
                     </div>
 
@@ -71,10 +75,10 @@
                     <div class="form__field">
                         <label for="brand" class="form__label">Marca:</label>
                         <select class="form__select" id="brand">
-                            <option value="selectType">Seleccione...</option>
-                            <option value="mercedes benz">Mercedez Benz</option>
+                            <option value="selectType" hidden>Seleccione...</option>
+                            <!-- <option value="mercedes benz">Mercedez Benz</option>
                             <option value="fiat">Fiat</option>
-                            <option value="volkswagen">Volkswagen</option>
+                            <option value="volkswagen">Volkswagen</option> -->
                         </select>
                     </div>
 
@@ -82,22 +86,27 @@
                     <div class="form__field">
                         <label for="model" class="form__label">Modelo:</label>
                         <select class="form__select" id="model">
-                            <option value="selectType">Seleccione...</option>
-                            <option value="palio">Palio</option>
+                            <option value="selectType" hidden>Seleccione...</option>
+                            <!-- <option value="palio">Palio</option>
                             <option value="cronos">Cronos</option>
-                            <option value="punto">Punto</option>
+                            <option value="punto">Punto</option> -->
                         </select>
                     </div>
 
                     <!-- Version -->
                     <div class="form__field">
-                        <label for="version" class="form__label">Versión:</label>
+                        <!-- <label for="version" class="form__label">Versión:</label>
                         <select class="form__select" id="version">
                             <option value="selectType">Seleccione...</option>
                             <option value="1.8hlx">1.8 HLX</option>
                             <option value="1.4fire">1.4 Fire</option>
                             <option value="1.4FireTop">1.4 Fire Top</option>
-                        </select>
+                        </select> -->
+
+                        <div class="form__field">
+                            <label for="version" class="form__label">Version:</label>
+                            <input type="text" id="version" class="form__input-text">
+                        </div>
                     </div>
                 </div>
 
@@ -123,7 +132,7 @@
                     <div class="form__field">
                         <label for="fuel" class="form__label">Combustible:</label>
                         <select class="form__select" id="fuel">
-                            <option value="selectType">Seleccione...</option>
+                            <option value="selectType" hidden>Seleccione...</option>
                             <option value="nafta">Nafta</option>
                             <option value="diesel">Diesel</option>
                             <option value="gnc">GNC</option>
@@ -194,11 +203,11 @@
                     <div class="form__field">
                         <label for="province" class="form__label">Provincia:</label>
                         <select class="form__select" id="province">
-                            <option value="selectType">Seleccione...</option>
-                            <option value="mendoza">Mendoza</option>
+                            <option value="selectType" hidden>Seleccione...</option>
+                            <!-- <option value="mendoza">Mendoza</option>
                             <option value="bsas">Buenos Aires</option>
                             <option value="tucuman">Tucumán</option>
-                            <option value="chubut">Chubut</option>
+                            <option value="chubut">Chubut</option> -->
                         </select>
                     </div>
 
@@ -206,11 +215,11 @@
                     <div class="form__field">
                         <label for="city" class="form__label">Ciudad:</label>
                         <select class="form__select" id="city">
-                            <option value="selectType">Seleccione...</option>
-                            <option value="guaymallen">Guaymallén</option>
+                            <option value="selectType" hidden>Seleccione...</option>
+                            <!-- <option value="guaymallen">Guaymallén</option>
                             <option value="maipu">Maipú</option>
                             <option value="lujandecuyo">Luján de Cuyo</option>
-                            <option value="godoycruz">Godoy Cruz</option>
+                            <option value="godoycruz">Godoy Cruz</option> -->
                         </select>
                     </div>
 
@@ -236,7 +245,10 @@
         </div>
     </div>
     
-    
-    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/class.js"></script>
+    <script src="js/objects.js"></script>
+    <script src="js/publish.js"></script>
 </body>
 </html>

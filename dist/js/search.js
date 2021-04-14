@@ -3,48 +3,6 @@ const type = localStorage.getItem('type');
 const select = document.getElementById('brand');
 const currentPublications = publications.filter(publication => publication.vehicleInfo.type === type);
 
-// Funcion que permite publicar un nuevo vehículo
-// let publicar = () => {
-//     let tipo;
-//     tipo = parseInt(prompt('Ingrese tipo de vehículo:\n\n[1] Auto\n[2] Utilitario\n[3] Moto'));
-//     switch (tipo) {
-//         case 1:
-//             tipo = 'auto';
-//             break;
-//         case 2:
-//             tipo = 'utilitario';
-//             break;
-//         case 3:
-//             tipo = 'moto';
-//             break;
-//         default:
-//             break;
-//     }
-//     let marca = prompt('Ingrese marca del vehículo');
-//     let modelo = prompt('Ingrese modelo del vehículo');
-//     let version = prompt('Ingrese versión');
-//     let combustible = parseInt(prompt('Indique tipo de combustible\n[1] Nafta\n[2] Diesel\n[3] GNC\n[4] Eléctrico\n[5] Híbrido'));
-//     let anio = parseInt(prompt('Ingrese año'));
-//     let kilometros = parseInt(prompt('Ingrese kilometraje'));
-//     let precio = prompt('Ingrese precio');
-//     let ubicacion = prompt('Ingrese su ubicación');
-
-//     const v = new Vehiculo(tipo, marca, modelo, version, combustible, anio, kilometros, precio, ubicacion);
-//     switch (v.tipo) {
-//         case 'auto':
-//             listaAutos.push(v);
-//             break;
-//         case 'utilitario':
-//             listaUtilitarios.push(v);
-//             break;
-//         case 'moto':
-//             listaMotos.push(v);
-//             break;
-//         default:
-//             break;
-//     }
-// }
-
 // Función que genera el html que se va a insertar dinámicamente en la página search.html
 let generateHtml = (filteredPublications = currentPublications) => {
     let html = '';
@@ -93,8 +51,10 @@ let generateSelect = () => {
 let showPublications  = () => {
     const html = generateHtml();
 
-    const showcase = document.getElementById('showcase');
-    showcase.innerHTML = html;
+    //const showcase = document.getElementById('showcase');
+    //showcase.innerHTML = html;
+    
+    $('#showcase').html(html);
 }
 
 const filterByBrand = () => {
@@ -106,8 +66,10 @@ const filterByBrand = () => {
     } else {
         const html = generateHtml(filteredPublications);
     
-        const showcase = document.getElementById('showcase');
-        showcase.innerHTML = html;
+        // const showcase = document.getElementById('showcase');
+        // showcase.innerHTML = html;
+
+        $('#showcase').html(html);
     }
 
 }
@@ -115,5 +77,7 @@ const filterByBrand = () => {
 // LISTENERS
 select.addEventListener('change', filterByBrand);
 
-generateSelect();
-showPublications();
+$(document).ready(function () {
+    generateSelect();
+    showPublications();
+});

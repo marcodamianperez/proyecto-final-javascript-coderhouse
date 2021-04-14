@@ -1,0 +1,303 @@
+[
+    {
+        "id": "1",
+        "type": "Cars",
+        "name": "Alfa Romeo",
+        "models": [
+            {
+                "id": "1",
+                "name": "145"
+            },
+            {
+                "id": "2",
+                "name": "155"
+            },
+            {
+                "id": "3",
+                "name": "166"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "type": "Cars",
+        "name": "Audi",
+        "models": [
+            {
+                "id": "1",
+                "name": "A1"
+            },
+            {
+                "id": "2",
+                "name": "A3"
+            },
+            {
+                "id": "3",
+                "name": "A4"
+            },
+            {
+                "id": "4",
+                "name": "A5"
+            },
+            {
+                "id": "5",
+                "name": "A6"
+            },
+            {
+                "id": "6",
+                "name": "A7"
+            },
+            {
+                "id": "7",
+                "name": "S3"
+            },
+            {
+                "id": "8",
+                "name": "S5"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "type": "Cars",
+        "name": "BMW",
+        "models": [
+            {
+                "id": "1",
+                "name": "Serie 1"
+            },
+            {
+                "id": "2",
+                "name": "Serie 3"
+            },
+            {
+                "id": "3",
+                "name": "Serie 5"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "type": "Cars",
+        "name": "Chevrolet",
+        "models": [
+            {
+                "id": "1",
+                "name": "Astra"
+            },
+            {
+                "id": "2",
+                "name": "Corsa"
+            },
+            {
+                "id": "3",
+                "name": "Meriva"
+            },
+            {
+                "id": "4",
+                "name": "Vectra"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "type": "Cars",
+        "name": "Citroën",
+        "models": [
+            {
+                "id": "1",
+                "name": "C3"
+            },
+            {
+                "id": "2",
+                "name": "C4"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "type": "Cars",
+        "name": "Dodge",
+        "models": [
+            {
+                "id": "1",
+                "name": "1500"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "type": "Cars",
+        "name": "Fiat",
+        "models": [
+            {
+                "id": "1",
+                "name": "Argo"
+            },
+            {
+                "id": "2",
+                "name": "Idea"
+            },
+            {
+                "id": "3",
+                "name": "Palio"
+            },
+            {
+                "id": "4",
+                "name": "Punto"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "type": "Cars",
+        "name": "Ford",
+        "models": [
+            {
+                "id": "1",
+                "name": "Focus"
+            },
+            {
+                "id": "2",
+                "name": "Fiesta"
+            },
+            {
+                "id": "3",
+                "name": "Mondeo"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "type": "Cars",
+        "name": "Honda",
+        "models": [
+            {
+                "id": "1",
+                "name": "Civic"
+            },
+            {
+                "id": "2",
+                "name": "CR-V"
+            },
+            {
+                "id": "3",
+                "name": "Accord"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "type": "Cars",
+        "name": "Mercedes Benz",
+        "models": [
+            {
+                "id": "1",
+                "name": "Clase A"
+            },
+            {
+                "id": "2",
+                "name": "Clase C"
+            },
+            {
+                "id": "3",
+                "name": "Clase E"
+            },
+            {
+                "id": "4",
+                "name": "Clase S"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "type": "Cars",
+        "name": "Nissan",
+        "models": [
+            {
+                "id": "1",
+                "name": "Tiida"
+            },
+            {
+                "id": "2",
+                "name": "Versa"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "type": "Cars",
+        "name": "Peugeot",
+        "models": [
+            {
+                "id": "1",
+                "name": "206"
+            },
+            {
+                "id": "2",
+                "name": "307"
+            },
+            {
+                "id": "3",
+                "name": "308"
+            },
+            {
+                "id": "4",
+                "name": "208"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "type": "Cars",
+        "name": "Renault",
+        "models": [
+            {
+                "id": "1",
+                "name": "Sandero"
+            },
+            {
+                "id": "2",
+                "name": "Clio"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "type": "Cars",
+        "name": "Toyota",
+        "models": [
+            {
+                "id": "1",
+                "name": "Corolla"
+            },
+            {
+                "id": "2",
+                "name": "Camry"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "type": "Cars",
+        "name": "Volkswagen",
+        "models": [
+            {
+                "id": "1",
+                "name": "Gol"
+            },
+            {
+                "id": "2",
+                "name": "Suran"
+            },
+            {
+                "id": "3",
+                "name": "Fox"
+            },
+            {
+                "id": "4",
+                "name": "Scirocco"
+            }
+        ]
+    }    
+]

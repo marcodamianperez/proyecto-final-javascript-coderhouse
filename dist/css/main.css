@@ -79,7 +79,8 @@ body {
     padding: 0.4rem 0.8rem;
   }
 }
-.btn .fa-plus-circle {
+.btn .fa-plus-circle,
+.btn .fa-arrow-circle-left {
   margin-right: 0.8rem;
 }
 
@@ -143,6 +144,13 @@ body {
     height: 6rem;
     font-size: 1.8rem;
   }
+}
+
+.filter {
+  padding: 2rem 0;
+}
+.filter option {
+  text-transform: capitalize;
 }
 
 .footer {
@@ -359,9 +367,6 @@ body {
   background-color: #e5e5e5;
   padding: 3rem 0;
 }
-.publish .center-text {
-  text-align: center;
-}
 .publish__title {
   font-size: 2rem;
   margin-bottom: 1.8rem;
@@ -442,6 +447,10 @@ body {
 
 .mandatory {
   color: red;
+}
+
+.hide {
+  display: none;
 }
 
 .showcase {
@@ -548,8 +557,12 @@ body {
   font-weight: 700;
 }
 
-.filter option {
-  text-transform: capitalize;
+.center-text {
+  text-align: center;
+}
+
+.margin-bottom-small {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

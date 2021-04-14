@@ -1,5 +1,4 @@
-const vehicleTypeContainer = document.getElementById('vehicleTypeContainer');
-vehicleTypeContainer.addEventListener('click', e => {
+$('#vehicleTypeContainer').click(e => {
     localStorage.clear();
     if (e.target.classList.contains('cars')) {
         localStorage.setItem('type', 'car')

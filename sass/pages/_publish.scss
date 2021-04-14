@@ -1,10 +1,6 @@
 .publish {
     background-color: $color-light-grey;
     padding: 3rem 0;
-
-    .center-text {
-        text-align: center;
-    }
     
     &__title {
         font-size: 2rem;
@@ -105,4 +101,8 @@
 
 .mandatory {
     color: red;
+}
+
+.hide {
+    display: none;
 }

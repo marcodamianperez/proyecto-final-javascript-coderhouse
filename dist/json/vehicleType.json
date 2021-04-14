@@ -1,0 +1,14 @@
+[
+    {
+        "type": "Cars",
+        "id": "1"
+    },
+    {
+        "type": "Pickups",
+        "id": "2"
+    },
+    {
+        "type": "Motorcycles",
+        "id": "3"
+    }
+]

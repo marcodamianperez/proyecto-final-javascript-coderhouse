@@ -1,0 +1,130 @@
+[
+    {
+        "id": "1",
+        "type": "Pickups",
+        "name": "Chevrolet",
+        "models": [
+            {
+                "id": "1",
+                "name": "S-10"
+            },
+            {
+                "id": "2",
+                "name": "Montana"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "type": "Pickups",
+        "name": "Fiat",
+        "models": [
+            {
+                "id": "1",
+                "name": "Strada"
+            },
+            {
+                "id": "2",
+                "name": "Fiorino"
+            },
+            {
+                "id": "3",
+                "name": "Toro"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "type": "Pickups",
+        "name": "Ford",
+        "models": [
+            {
+                "id": "1",
+                "name": "F-100"
+            },
+            {
+                "id": "2",
+                "name": "F-150"
+            },
+            {
+                "id": "3",
+                "name": "Ranger"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "type": "Pickups",
+        "name": "Mercedes Benz",
+        "models": [
+            {
+                "id": "1",
+                "name": "Sprinter"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "type": "Pickups",
+        "name": "Peugeot",
+        "models": [
+            {
+                "id": "1",
+                "name": "Boxer"
+            },
+            {
+                "id": "2",
+                "name": "Partner"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "type": "Pickups",
+        "name": "Renault",
+        "models": [
+            {
+                "id": "1",
+                "name": "Duster"
+            },
+            {
+                "id": "2",
+                "name": "Oroch"
+            },
+            {
+                "id": "3",
+                "name": "Kangoo"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "type": "Pickups",
+        "name": "Toyota",
+        "models": [
+            {
+                "id": "1",
+                "name": "Hilux"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "type": "Pickups",
+        "name": "Volkswagen",
+        "models": [
+            {
+                "id": "1",
+                "name": "Amarok"
+            },
+            {
+                "id": "2",
+                "name": "Caddy"
+            },
+            {
+                "id": "3",
+                "name": "Saveiro"
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "type": "Motorcycles",
+        "name": "Ducati",
+        "models": [
+            {
+                "id": "1",
+                "name": "Scrambler"
+            },
+            {
+                "id": "2",
+                "name": "Monster"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "type": "Motorcycles",
+        "name": "Honda",
+        "models": [
+            {
+                "id": "1",
+                "name": "CBR"
+            },
+            {
+                "id": "2",
+                "name": "Tornado"
+            },
+            {
+                "id": "3",
+                "name": "Wave"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "type": "Motorcycles",
+        "name": "Kawasaki",
+        "models": [
+            {
+                "id": "1",
+                "name": "Ninja"
+            },
+            {
+                "id": "2",
+                "name": "Vulkan"
+            }
+        ]
+    }
+]
