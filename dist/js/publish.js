@@ -1,51 +1,11 @@
-// object properties
-const vehicleInfo = {
-    type: '',
-    model: '', 
-    version: '', 
-    fuel: '', 
-    year: '', 
-    transmission: '', 
-    mileaje: '', 
-    price: '', 
-    brandNew: ''
-}
-
-const sellerInfo = {
-    name: '',
-    phone: '',
-    email: '',
-    location: {
-        province: '',
-        city: '',
-        street: ''
-    }
-}
-
-let images = 'img/punto.jpg';
-let exchange;
-
-let dates = {
-    publicationDate: '',
-    lastEditDate: ''
-}
-
-let highlighted;
-let description;
-
-const currentPublication = new Publication({
-    vehicleInfo, sellerInfo, images, exchange, dates, highlighted, description
-});
-
 const radioButtonsState = document.getElementsByName('state');
-const year = document.getElementById('year');
-let brandNew = null;
-const mileaje = document.getElementById('mileaje');
-const vehicleType = document.getElementById('type');
-const brand = document.getElementById('brand');
-const model = document.getElementById('model');
-const selectProvince = document.getElementById('province');
-const selectCity = document.getElementById('city');
+const yearInput = document.getElementById('year');
+const mileajeInput = document.getElementById('mileaje');
+const vehicleTypeSelect = document.getElementById('type');
+const brandSelect = document.getElementById('brand');
+const modelSelect = document.getElementById('model');
+const provinceSelect = document.getElementById('province');
+const citySelect = document.getElementById('city');
 
 let currentJSON = '';
 
@@ -59,13 +19,11 @@ $(document).ready(() => {
 radioButtonsState.forEach(element => {
     element.addEventListener('change', () => {
         if (element.id === 'new') {
-            year.parentElement.classList.add('hide');
-            mileaje.parentElement.classList.add('hide');
-            currentPublication.vehicleInfo.brandNew = true
+            yearInput.parentElement.classList.add('hide');
+            mileajeInput.parentElement.classList.add('hide');
         } else {
-            year.parentElement.classList.remove('hide');
-            mileaje.parentElement.classList.remove('hide');
-            currentPublication.vehicleInfo.brandNew = false;
+            yearInput.parentElement.classList.remove('hide');
+            mileajeInput.parentElement.classList.remove('hide');
         }
     });
 });
@@ -94,13 +52,13 @@ const getVehicleType = () => {
                 options += `<option value="${vehicleType.type}">${type}</option>`;
             });
 
-            vehicleType.innerHTML += options;
+            vehicleTypeSelect.innerHTML += options;
         }
     });
 }
 
 // Se carga el select de marcas de acuerdo al tipo de vehículo seleccionado
-$(vehicleType).change(e => {
+$(vehicleTypeSelect).change(e => {
         currentJSON = e.target.value;
 
         const URL = `json/${e.target.value}.json`;
@@ -111,16 +69,16 @@ $(vehicleType).change(e => {
                     options += `<option value="${brand.id}">${brand.name}</option>`;
                 });
 
-                brand.innerHTML = options;
+                brandSelect.innerHTML = options;
             }
         });
 });
 
 // Se carga el select de modelos de vehículo de acuerdo a la marca seleccionada
-$(brand).change(e => {
+$(brandSelect).change(e => {
     const URL = `json/${currentJSON}.json`;
     $.getJSON(URL, (data, textStatus) => {
-            if (textStatus = 'success') {
+            if (textStatus === 'success') {
                 // Primero obtengo la marca seleccionada
                 let vehicle = data.find(x => e.target.value === x.id);
 
@@ -130,7 +88,7 @@ $(brand).change(e => {
                     options += `<option value="${model.id}">${model.name}</option>`;
                 });
                 
-                model.innerHTML = options;
+                modelSelect.innerHTML = options;
             }
         }
     );
@@ -146,14 +104,14 @@ const getProvinces = () => {
             provinces.forEach(province => {
                 options += `<option value="${province.id}">${province.nombre}</option>`;
             });
-
-            selectProvince.innerHTML += options;
+            
+            provinceSelect.innerHTML += options;
         }
     });
 }
 
-// se carga el select de ciudad de acuerdo a la provincia seleccionada
-$(selectProvince).change(e => {
+// Se carga el select de ciudad de acuerdo a la provincia seleccionada
+$(provinceSelect).change(e => {
     let URL = `https://apis.datos.gob.ar/georef/api/municipios?provincia=${e.target.value}&campos=id,nombre`;
     $.getJSON(URL, (data, textStatus) => {
         let cities = data.municipios;
@@ -166,6 +124,32 @@ $(selectProvince).change(e => {
             options += `<option value="error" disabled>No se encontraron ciudades</option>`;
         }
 
-        selectCity.innerHTML = options;
+        citySelect.innerHTML = options;
     });
+});
+
+$('#form').submit(e => { 
+    e.preventDefault();
+    const newVehicle = validateForm();
+
+    if (errors.length === 0) {
+        let newPublicationsArray = [];
+    
+        if (JSON.parse(localStorage.getItem('newPublicationsArray')) !== null) {
+            newPublicationsArray = JSON.parse(localStorage.getItem('newPublicationsArray'));
+        }
+        
+        newPublicationsArray.push(newVehicle);
+        localStorage.setItem('newPublicationsArray', JSON.stringify(newPublicationsArray));
+    } else {
+        let errorsElement = document.getElementById('errors');
+        errorsElement.innerHTML = '';
+
+        errors.forEach(error => {
+            errorsElement.innerHTML += `<p>${error}</p>`
+        })
+
+        errors = [];
+    }
+    
 });

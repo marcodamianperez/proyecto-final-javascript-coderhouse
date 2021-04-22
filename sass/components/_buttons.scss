@@ -6,10 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     
     &--normal {
         padding: 1.4rem 1.2rem;
         font-size: 1.6rem;
+        border: none;
         border-radius: 1rem;
 
         @media (min-width: $tablet-landscape) {

@@ -1,7 +1,24 @@
 // VARIABLES GLOBALES
 const type = localStorage.getItem('type');
 const select = document.getElementById('brand');
-const currentPublications = publications.filter(publication => publication.vehicleInfo.type === type);
+
+// publicaciones por defecto para que la app no esté vacía al inicio
+const defaultPublications = publications.filter(publication => publication.vehicleInfo.type === type);
+
+// publicaciones que realiza el usuario y se guardan en local storage
+let localStoragePublications = null;
+if (JSON.parse(localStorage.getItem('newPublicationsArray')) !== null) {
+    localStoragePublications = JSON.parse(localStorage.getItem('newPublicationsArray')).filter(publication => publication.vehicleInfo.type === type);
+}
+
+// si no hay publicaciones del usuario trabajo sólo con las por defecto, caso contrario uno ambos arrays y trabajo con todas las publicaciones
+let currentPublications = [];
+if (localStoragePublications === null) {
+    currentPublications = defaultPublications.filter(publication => publication.vehicleInfo.type === type);
+} else {
+    const allPublications = defaultPublications.concat(localStoragePublications);
+    currentPublications = allPublications.filter(publication => publication.vehicleInfo.type === type);
+}
 
 // Función que genera el html que se va a insertar dinámicamente en la página search.html
 let generateHtml = (filteredPublications = currentPublications) => {
@@ -47,13 +64,9 @@ let generateSelect = () => {
     select.innerHTML += options;
 }
 
-// Función que muestra el listado de vehículos disponibles, según lo que el usuario eligió ver (auto, utilitario o moto)
+// Función que muestra el listado de vehículos disponibles, según lo que el usuario eligió ver (autos, utilitarios o motos)
 let showPublications  = () => {
-    const html = generateHtml();
-
-    //const showcase = document.getElementById('showcase');
-    //showcase.innerHTML = html;
-    
+    const html = generateHtml();    
     $('#showcase').html(html);
 }
 
@@ -65,10 +78,6 @@ const filterByBrand = () => {
         showPublications();
     } else {
         const html = generateHtml(filteredPublications);
-    
-        // const showcase = document.getElementById('showcase');
-        // showcase.innerHTML = html;
-
         $('#showcase').html(html);
     }
 

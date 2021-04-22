@@ -1,10 +1,10 @@
 $('#vehicleTypeContainer').click(e => {
-    localStorage.clear();
+    //localStorage.clear();
     if (e.target.classList.contains('cars')) {
-        localStorage.setItem('type', 'car')
+        localStorage.setItem('type', 'Cars')
     } else if (e.target.classList.contains('pickups')) {
-        localStorage.setItem('type', 'pickup')
+        localStorage.setItem('type', 'Pickups')
     } else if (e.target.classList.contains('bikes')) {
-        localStorage.setItem('type', 'motorcycle')
+        localStorage.setItem('type', 'Motorcycles')
     }
 });

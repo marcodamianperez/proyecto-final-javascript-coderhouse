@@ -43,7 +43,7 @@
             </div>
 
             <!-- Form -->
-            <form class="form">
+            <form class="form" id="form">
                 <div class="form__header">
                     <h2 class="form__subtitle">01 - Tipo de vehículo</h2>
                 </div>
@@ -53,11 +53,11 @@
 
                     <!-- State (used or new) -->
                     <div class="form__field">                        
-                        <input type="radio" name="state" id="used">
-                        <label for="used" value="used" class="form__radio-label">Usado</label>
+                        <input type="radio" name="state" id="used" value="used">
+                        <label for="used" class="form__radio-label">Usado</label>
                         
-                        <input type="radio" name="state" id="new">
-                        <label for="new" value="new" class="form__radio-label">0 Km</label>                        
+                        <input type="radio" name="state" id="new" value="new">
+                        <label for="new" class="form__radio-label">0 Km</label>                        
                     </div>
 
                     <!-- Type (car, pickup or motorcycle) -->
@@ -121,10 +121,10 @@
                     <div class="form__field">
                         <label class="form__label">Transmisión:</label>
 
-                        <input type="radio" name="transmission" id="manual">
+                        <input type="radio" name="transmission" id="manual" value="Manual">
                         <label for="manual" class="form__radio-label">Manual</label>
                         
-                        <input type="radio" name="transmission" id="automatic">
+                        <input type="radio" name="transmission" id="automatic" value="Automática">
                         <label for="automatic" class="form__radio-label">Automático</label>
                     </div>
 
@@ -133,13 +133,13 @@
                         <label for="fuel" class="form__label">Combustible:</label>
                         <select class="form__select" id="fuel">
                             <option value="selectType" hidden>Seleccione...</option>
-                            <option value="nafta">Nafta</option>
-                            <option value="diesel">Diesel</option>
-                            <option value="gnc">GNC</option>
-                            <option value="electrico">Eléctrico</option>
-                            <option value="hibrido">Híbrido</option>
-                            <option value="otro">Otro</option>
-                            <option value="sincombustible">Sin combustible</option>
+                            <option value="Nafta">Nafta</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="GNC">GNC</option>
+                            <option value="Eléctrico">Eléctrico</option>
+                            <option value="Híbrido">Híbrido</option>
+                            <option value="Otro">Otro</option>
+                            <option value="Sin combustible">Sin combustible</option>
                         </select>
                     </div>
 
@@ -193,10 +193,10 @@
                         <input type="text" id="name" class="form__input-text">
                     </div>
 
-                    <!-- Address -->
+                    <!-- Street -->
                     <div class="form__field">
-                        <label for="address" class="form__label">Dirección:</label>
-                        <input type="text" id="address" class="form__input-text">
+                        <label for="street" class="form__label">Dirección:</label>
+                        <input type="text" id="street" class="form__input-text">
                     </div>
 
                     <!-- Province -->
@@ -237,7 +237,8 @@
                 </div>
 
                 <div class="form__card">
-                    <a href="index.html" class="btn btn--normal">Publicar</a>
+                    <div class="errors" id="errors"></div>
+                    <button type="submit" class="btn btn--normal">Publicar</button>
                 </div>
 
             </form>
@@ -249,6 +250,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/class.js"></script>
     <script src="js/objects.js"></script>
+    <script src="js/validate.js"></script>
     <script src="js/publish.js"></script>
 </body>
 </html>
