@@ -35,18 +35,44 @@
                 Volver
             </a>
             <form id="form">
-                <select class="form__brand" id="brand">
-                    <option value="all" selected>Mostrar todos</option>
-                    <!-- <option value="fiat">Fiat</option>
-                    <option value="ford">Ford</option>
-                    <option value="volkswagen">Volkswagen</option>
-                    <option value="renault">Renault</option> -->
-                </select>
+                <!-- Marca -->
+                <div class="form__field">
+                    <label for="brand" class="form__label">Marca:</label>
+                    <select class="form__select" id="brand">
+                        <option value="all" selected>Mostrar todos</option>
+                        <!-- <option value="fiat">Fiat</option>
+                        <option value="ford">Ford</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="renault">Renault</option> -->
+                    </select>
+                </div>
 
-                <!-- <select class="form__model" id="model">
-                    <option value="model" selected>Modelo</option>
-                    <option value="passat">Passat</option>
-                </select> -->
+                <!-- Modelo -->
+                <div class="form__field">
+                    <label for="model" class="form__label">Modelo:</label>
+                    <select class="form__select" id="model">
+                        <option value="all" selected>Mostrar todos</option>
+                        <!-- <option value="palio">Palio</option>
+                        <option value="siena">Siena</option>
+                        <option value="punto">Punto</option>
+                        <option value="argo">Argo</option> -->
+                    </select>
+                </div>
+
+                <!-- Año -->
+                <div class="form__field">
+                    <label for="fuel" class="form__label">Combustible:</label>
+                    <select class="form__select" id="fuel">
+                        <option value="all">Todos</option>
+                        <option value="Nafta">Nafta</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="GNC">GNC</option>
+                        <option value="Eléctrico">Eléctrico</option>
+                        <option value="Híbrido">Híbrido</option>
+                        <option value="Otro">Otro</option>
+                        <option value="Sin combustible">Sin combustible</option>
+                    </select>
+                </div>
             </form>
         </div>
 
