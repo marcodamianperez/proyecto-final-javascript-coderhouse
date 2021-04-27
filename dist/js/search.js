@@ -155,3 +155,7 @@ showcase.addEventListener('click', e => {
         localStorage.setItem('id', e.target.id);
     }
 });
+
+$(document).ready(function () {
+    $('body').fadeIn('slow');
+});

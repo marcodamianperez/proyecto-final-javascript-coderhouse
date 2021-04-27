@@ -4,9 +4,10 @@ class Publication {
         this.validateYear(obj.vehicleInfo.year);
         this.validateMileaje(obj.vehicleInfo.mileaje);
         this.validatePrice(obj.vehicleInfo.price);
+        this.validateState(obj.vehicleInfo.brandNew);
         this.sellerInfo = obj.sellerInfo;
         this.images = obj.images;
-        this.exchange = obj.exchange;
+        this.validateExchange(obj.exchange);
         this.dates = obj.dates;
         this.highlighted = obj.highlighted;
         this.validateDescription(obj.description);
@@ -43,6 +44,22 @@ class Publication {
             this.description = 'Sin descripción.';
         } else {
             this.description = description;
+        }
+    }
+
+    validateState(state) {
+        if (state) {
+            this.vehicleInfo.brandNew = '0 km'
+        } else {
+            this.vehicleInfo.brandNew = 'Usado'
+        }
+    }
+
+    validateExchange(exchange) {
+        if (exchange) {
+            this.exchange = 'Si'
+        } else {
+            this.exchange = 'No'
         }
     }
 }

@@ -158,3 +158,7 @@ $('#form').submit(e => {
     }
     
 });
+
+$(document).ready(function () {
+    $('body').fadeIn('slow');
+});

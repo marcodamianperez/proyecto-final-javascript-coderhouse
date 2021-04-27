@@ -23,6 +23,7 @@
         font-size: 2rem;
         color: $color-red;
         margin-top: 0.5rem;
+        font-weight: 700;
     }
 
     &__image {
@@ -49,9 +50,11 @@
     }
 
     &__location,
-    &__phone {
+    &__phone,
+    &__email {
         color: $color-dark-grey;
         font-size: 1.4rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -81,4 +84,5 @@ table {
 
 .right {
     text-align: right;
+    font-weight: 500;
 }

@@ -8,3 +8,7 @@ $('#vehicleTypeContainer').click(e => {
         localStorage.setItem('type', 'Motorcycles')
     }
 });
+
+$(document).ready(function () {
+    $('body').fadeIn('slow');
+});

@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  display: none;
+}
+
 .container {
   width: 90%;
   max-width: 86rem;
@@ -394,6 +398,7 @@ body {
   font-size: 2rem;
   color: crimson;
   margin-top: 0.5rem;
+  font-weight: 700;
 }
 .vehicle__image {
   margin-bottom: 2rem;
@@ -413,9 +418,10 @@ body {
   color: crimson;
   font-weight: 700;
 }
-.vehicle__location, .vehicle__phone {
+.vehicle__location, .vehicle__phone, .vehicle__email {
   color: #121212;
   font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-title {
@@ -445,6 +451,7 @@ body {
 
 .right {
   text-align: right;
+  font-weight: 500;
 }
 
 .publish {
