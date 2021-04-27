@@ -1,23 +1,48 @@
 class Publication {
     constructor(obj) {
         this.vehicleInfo = obj.vehicleInfo;
+        this.validateYear(obj.vehicleInfo.year);
+        this.validateMileaje(obj.vehicleInfo.mileaje);
+        this.validatePrice(obj.vehicleInfo.price);
         this.sellerInfo = obj.sellerInfo;
         this.images = obj.images;
         this.exchange = obj.exchange;
         this.dates = obj.dates;
         this.highlighted = obj.highlighted;
-        this.description = obj.description;
+        this.validateDescription(obj.description);
+        this.id = obj.id;
     }
 
-    validatePrice() {
-        if (obj.vehicleInfo.price === '' || obj.vehicleInfo.price === null) {
-            this.vehicleInfo.price = 'A consultar';
+    validateYear(year) {
+        if (year === '') {
+            const today = new Date();
+            this.vehicleInfo.year = today.getFullYear();
+        } else {
+            this.vehicleInfo.year = year;
         }
     }
 
-    validateDescription() {
-        if (obj.description === '' || obj.description === null) {
+    validateMileaje(mileaje) {
+        if (mileaje === '') {
+            this.vehicleInfo.mileaje = '0';
+        } else {
+            this.vehicleInfo.mileaje = mileaje;
+        }
+    }
+
+    validatePrice(price) {
+        if (price === '' || price === null) {
+            this.vehicleInfo.price = 'A consultar';
+        } else {
+            this.vehicleInfo.price = price;
+        }
+    }
+
+    validateDescription(description) {
+        if (description === '' || description === null) {
             this.description = 'Sin descripción.';
+        } else {
+            this.description = description;
         }
     }
 }

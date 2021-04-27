@@ -31,6 +31,15 @@
         }
     }
 
+    &--details {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+
     .fa-plus-circle,
     .fa-arrow-circle-left {
         margin-right: 0.8rem;

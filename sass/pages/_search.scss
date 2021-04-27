@@ -15,10 +15,6 @@
     border: 2px solid transparent;
     transition: border 0.1s ease-in-out;
 
-    &:hover {
-        border: 2px solid $color-red;
-    }
-
     &:not(:last-child) {
         margin-bottom: 3rem;
 
@@ -26,6 +22,12 @@
             margin-bottom: 2rem;
         }
     }
+
+    &:hover {
+        border: 2px solid $color-red;
+    }
+
+    
 
     @media (min-width: $tablet-portrait) {
         display: flex;
@@ -64,6 +66,7 @@
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
+        position: relative;
 
         @media (min-width: $tablet-portrait) {
             margin-top: 0;

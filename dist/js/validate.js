@@ -63,11 +63,11 @@ const validateForm = () => {
         errors.push('Seleccione tipo de combustible');
     }
 
-    if (year.length !== 4 || isNaN(year)) {
+    if (state === 'used' && year.length !== 4 || isNaN(year)) {
         errors.push('Ingrese año del vehículo');
     }
 
-    if (mileaje === '') {
+    if (state === 'used' && mileaje === '') {
         errors.push('Ingrese kilometraje');
     }
 
@@ -99,6 +99,7 @@ const validateForm = () => {
         errors.push('Ingrese email');
     }
 
+    // Con los datos del formulario construyo un nuevo objeto
     const newVehicle = new Publication(
         {
             vehicleInfo: {
@@ -130,7 +131,8 @@ const validateForm = () => {
                 lastEditDate: lastEditDate
             },
             highlighted: highlighted,
-            description: description
+            description: description,
+            id: id++
         }
     );
 

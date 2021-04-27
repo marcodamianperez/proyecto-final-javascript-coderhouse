@@ -1,0 +1,84 @@
+.vehicle {
+
+    background-color: $color-white;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    color: $color-grey-font;
+
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    &__brand-model {
+        color: $color-grey-font;
+        font-size: 2.2rem;
+    }
+
+    &__version {
+        color: $color-grey-font;
+        font-weight: 400;
+    }
+
+    &__price {
+        font-size: 2rem;
+        color: $color-red;
+        margin-top: 0.5rem;
+    }
+
+    &__image {
+        margin-bottom: 2rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__details {
+        margin: 2rem 0;
+    }
+
+    &__comments {
+        font-size: 1.4rem;
+        font-style: italic;
+    }
+
+    &__seller {
+        font-size: 1.6rem;
+        color: $color-red;
+        font-weight: 700;
+    }
+
+    &__location,
+    &__phone {
+        color: $color-dark-grey;
+        font-size: 1.4rem;
+    }
+}
+
+.section-title {
+    color: $color-grey-font;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+table {
+    @media (min-width: $tablet-landscape) {
+        width: 42%;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+
+    @media (min-width: $tablet-landscape) {
+        flex-direction: row;
+    }
+}
+
+.right {
+    text-align: right;
+}

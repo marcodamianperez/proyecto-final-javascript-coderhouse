@@ -33,7 +33,8 @@ publications.push(new Publication(
             lastEditDate: '07/02/2021'
         },
         highlighted: false,
-        description: 'Excelente estado. Papeles al día.'
+        description: 'Excelente estado. Papeles al día.',
+        id: 1
     }
 ));
 
@@ -68,7 +69,8 @@ publications.push(new Publication(
             lastEditDate: '18/03/2021'
         },
         highlighted: false,
-        description: 'Como recién salido de la agencia.'
+        description: 'Como recién salido de la agencia.',
+        id: 2
     }
 ));
 
@@ -103,7 +105,8 @@ publications.push(new Publication(
             lastEditDate: '01/01/2021'
         },
         highlighted: false,
-        description: 'Permutaría por moto tipo enduro.'
+        description: 'Permutaría por moto tipo enduro.',
+        id: 3
     }
 ));
 
@@ -138,7 +141,8 @@ publications.push(new Publication(
             lastEditDate: '21/12/2020'
         },
         highlighted: false,
-        description: '100% original. Sólo efectivo.'
+        description: '100% original. Sólo efectivo.',
+        id: 4
     }
 ));
 
@@ -173,7 +177,8 @@ publications.push(new Publication(
             lastEditDate: '18/03/2021'
         },
         highlighted: false,
-        description: 'Titular, papeles al día.'
+        description: 'Titular, papeles al día.',
+        id: 5
     }
 ));
 
@@ -208,7 +213,8 @@ publications.push(new Publication(
             lastEditDate: '11/03/2021'
         },
         highlighted: false,
-        description: 'Precio negociable, escucho ofertas. Paso más fotos por WhatsApp'
+        description: 'Precio negociable, escucho ofertas. Paso más fotos por WhatsApp',
+        id: 6
     }
 ));
 
@@ -243,7 +249,8 @@ publications.push(new Publication(
             lastEditDate: '12/03/2021'
         },
         highlighted: false,
-        description: 'Impecable, versión más full. Sólo efectivo.'
+        description: 'Impecable, versión más full. Sólo efectivo.',
+        id: 7
     }
 ));
 
@@ -278,7 +285,8 @@ publications.push(new Publication(
             lastEditDate: '19/02/2021'
         },
         highlighted: false,
-        description: 'Detalles a la vista. Cubiertas nuevas.'
+        description: 'Detalles a la vista. Cubiertas nuevas.',
+        id: 8
     }
 ));
 
@@ -315,7 +323,8 @@ publications.push(new Publication(
             lastEditDate: '28/02/2021'
         },
         highlighted: false,
-        description: 'Vehículo de trabajo. Muy cuidado.'
+        description: 'Vehículo de trabajo. Muy cuidado.',
+        id: 9
     }
 ));
 
@@ -350,7 +359,8 @@ publications.push(new Publication(
             lastEditDate: '28/12/2020'
         },
         highlighted: false,
-        description: 'Escucho ofertas.'
+        description: 'Escucho ofertas.',
+        id: 10
     }
 ));
 
@@ -385,7 +395,8 @@ publications.push(new Publication(
             lastEditDate: '31/12/2020'
         },
         highlighted: false,
-        description: 'Leve choque en la puerta izquierda.'
+        description: 'Leve choque en la puerta izquierda.',
+        id: 11
     }
 ));
 
@@ -420,7 +431,8 @@ publications.push(new Publication(
             lastEditDate: '9/03/2021'
         },
         highlighted: false,
-        description: 'Muy buen estado, pocos kilómetros.'
+        description: 'Muy buen estado, pocos kilómetros.',
+        id: 12
     }
 ));
 
@@ -455,7 +467,8 @@ publications.push(new Publication(
             lastEditDate: '15/12/2020'
         },
         highlighted: false,
-        description: 'Impecable.'
+        description: 'Impecable.',
+        id: 13
     }
 ));
 
@@ -490,7 +503,8 @@ publications.push(new Publication(
             lastEditDate: '13/03/2021'
         },
         highlighted: false,
-        description: '0 Km. Consultar financiación.'
+        description: '0 Km. Consultar financiación.',
+        id: 14
     }
 ));
 
@@ -527,7 +541,8 @@ publications.push(new Publication(
             lastEditDate: '05/01/2021'
         },
         highlighted: false,
-        description: 'Excelente estado.'
+        description: 'Excelente estado.',
+        id: 15
     }
 ));
 
@@ -562,7 +577,8 @@ publications.push(new Publication(
             lastEditDate: '16/03/2021'
         },
         highlighted: false,
-        description: 'Acepto auto como parte de pago.'
+        description: 'Acepto auto como parte de pago.',
+        id: 16
     }
 ));
 
@@ -597,7 +613,8 @@ publications.push(new Publication(
             lastEditDate: '01/03/2021'
         },
         highlighted: false,
-        description: 'Como nueva muy poco uso.'
+        description: 'Como nueva muy poco uso.',
+        id: 17
     }
 ));
 
@@ -632,7 +649,8 @@ publications.push(new Publication(
             lastEditDate: '14/03/2021'
         },
         highlighted: false,
-        description: 'Se vende urgente por viaje.'
+        description: 'Se vende urgente por viaje.',
+        id: 18
     }
 ));
 
@@ -667,6 +685,7 @@ publications.push(new Publication(
             lastEditDate: '19/03/2021'
         },
         highlighted: false,
-        description: 'Precio contado efectivo - No incluye gastos.'
+        description: 'Precio contado efectivo - No incluye gastos.',
+        id: 19
     }
 ));

@@ -22,30 +22,34 @@ if (localStoragePublications === null) {
     currentPublications = allPublications.filter(publication => publication.vehicleInfo.type === type);
 }
 
+let filteredPublications = currentPublications;
+
 // Función que genera el html que se va a insertar dinámicamente en la página search.html
 let generateHtml = (filteredPublications = currentPublications) => {
     let html = '';
     for (const publication of filteredPublications) {
-        html += `
-                <div class="car">
-                    <div class="car__image">
-                        <img src="${publication.images[0]}" alt="auto">
-                    </div>
-                    <div class="car__description">
-                        <div class="car__info">
-                            <span class="car__brand">${publication.vehicleInfo.brand}</span>
-                            <span class="car__model">${publication.vehicleInfo.model}</span>
-                            <div class="car__version">${publication.vehicleInfo.version}</div>
-                            <div class="car__millage">${publication.vehicleInfo.mileaje} Km</div>
-                            <div class="car__location">${publication.sellerInfo.location.city}, ${publication.sellerInfo.location.province}</div>
+        html += `   <div class="car">
+                        <div class="car__image">
+                            <img src="${publication.images[0]}" alt="auto">
                         </div>
-                        <div class="car__data">
-                            <div class="car__price">$ ${publication.vehicleInfo.price}</div>
-                            <span class="car__fuel">${publication.vehicleInfo.fuel}</span> | <span class="car__year">${publication.vehicleInfo.year}</span>
+                        <div class="car__description">
+                            <div class="car__info">
+                                <span class="car__brand">${publication.vehicleInfo.brand}</span>
+                                <span class="car__model">${publication.vehicleInfo.model}</span>
+                                <div class="car__version">${publication.vehicleInfo.version}</div>
+                                <div class="car__millage">${publication.vehicleInfo.mileaje} Km</div>
+                                <div class="car__location">${publication.sellerInfo.location.city}, ${publication.sellerInfo.location.province}</div>
+                            </div>
+                            <div class="car__data">
+                                <div class="car__price">$ ${publication.vehicleInfo.price}</div>
+                                <span class="car__fuel">${publication.vehicleInfo.fuel}</span> | <span class="car__year">${publication.vehicleInfo.year}</span>
+                            </div>
+                            <a href="details.html" class="btn btn--details details" id="${publication.id}">
+                                Ver publicación
+                            </a>
                         </div>
-                    </div>
                 </div>
-        `
+        `;
     }
     return html;
 }
@@ -90,13 +94,17 @@ let showPublications  = () => {
 
 const filterByBrand = () => {
     const brand = selectBrand.value;
-    const filteredPublications = currentPublications.filter(publication => publication.vehicleInfo.brand === brand);
+    filteredPublications = currentPublications.filter(publication => publication.vehicleInfo.brand === brand);
 
     if (brand === 'all') {
         showPublications();
+        selectFuel.setAttribute('disabled', 'true')
     } else {
         const html = generateHtml(filteredPublications);
         $('#showcase').html(html);
+        if (selectFuel.hasAttribute('disabled')) {
+            selectFuel.removeAttribute('disabled')
+        }
     }
 
     generateSelectModel(filteredPublications);
@@ -107,23 +115,28 @@ const filterByModel = () => {
     const model = selectModel.value;
 
     const filteredByBrand = currentPublications.filter(publication => publication.vehicleInfo.brand === brand);
-    const filteredByBrandAndModel = filteredByBrand.filter(publication => publication.vehicleInfo.model === model);
+    filteredPublications = filteredByBrand.filter(publication => publication.vehicleInfo.model === model);
 
     if (model === 'all') {
         const html = generateHtml(filteredByBrand);
         $('#showcase').html(html);
     } else {
-        const html = generateHtml(filteredByBrandAndModel);
+        const html = generateHtml(filteredPublications);
         $('#showcase').html(html);
     }
 }
 
 const filterByFuel = () => {
     const fuel = selectFuel.value;
-    const filteredPublications = currentPublications.filter(publication => publication.vehicleInfo.fuel === fuel);
+    const filteredByFuel = filteredPublications.filter(publication => publication.vehicleInfo.fuel === fuel);
 
-    const html = generateHtml(filteredPublications);
-    $('#showcase').html(html);
+    if (fuel === 'all') {
+        const html = generateHtml(filteredPublications);
+        $('#showcase').html(html);
+    } else {
+        const html = generateHtml(filteredByFuel);
+        $('#showcase').html(html);
+    }
 }
 
 // LISTENERS
@@ -134,4 +147,11 @@ selectFuel.addEventListener('change', filterByFuel);
 $(document).ready(function () {
     generateSelectBrand();
     showPublications();
+});
+
+const showcase = document.getElementById('showcase');
+showcase.addEventListener('click', e => {
+    if (e.target.classList.contains('details')) {
+        localStorage.setItem('id', e.target.id);
+    }
 });

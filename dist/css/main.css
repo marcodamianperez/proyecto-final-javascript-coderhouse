@@ -81,6 +81,14 @@ body {
     padding: 0.4rem 0.8rem;
   }
 }
+.btn--details {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
 .btn .fa-plus-circle,
 .btn .fa-arrow-circle-left {
   margin-right: 0.8rem;
@@ -365,6 +373,80 @@ body {
   }
 }
 
+.vehicle {
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  color: #666;
+}
+.vehicle__header {
+  margin-bottom: 2rem;
+}
+.vehicle__brand-model {
+  color: #666;
+  font-size: 2.2rem;
+}
+.vehicle__version {
+  color: #666;
+  font-weight: 400;
+}
+.vehicle__price {
+  font-size: 2rem;
+  color: crimson;
+  margin-top: 0.5rem;
+}
+.vehicle__image {
+  margin-bottom: 2rem;
+}
+.vehicle__image img {
+  width: 100%;
+}
+.vehicle__details {
+  margin: 2rem 0;
+}
+.vehicle__comments {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.vehicle__seller {
+  font-size: 1.6rem;
+  color: crimson;
+  font-weight: 700;
+}
+.vehicle__location, .vehicle__phone {
+  color: #121212;
+  font-size: 1.4rem;
+}
+
+.section-title {
+  color: #666;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  table {
+    width: 42%;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+@media (min-width: 900px) {
+  .flex-container {
+    flex-direction: row;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
 .publish {
   background-color: #e5e5e5;
   padding: 3rem 0;
@@ -478,9 +560,6 @@ body {
   border: 2px solid transparent;
   transition: border 0.1s ease-in-out;
 }
-.car:hover {
-  border: 2px solid crimson;
-}
 .car:not(:last-child) {
   margin-bottom: 3rem;
 }
@@ -488,6 +567,9 @@ body {
   .car:not(:last-child) {
     margin-bottom: 2rem;
   }
+}
+.car:hover {
+  border: 2px solid crimson;
 }
 @media (min-width: 600px) {
   .car {
@@ -522,6 +604,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  position: relative;
 }
 @media (min-width: 600px) {
   .car__description {

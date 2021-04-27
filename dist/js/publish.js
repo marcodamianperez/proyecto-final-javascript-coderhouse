@@ -131,6 +131,7 @@ $(provinceSelect).change(e => {
 $('#form').submit(e => { 
     e.preventDefault();
     const newVehicle = validateForm();
+    let errorsElement = document.getElementById('errors');
 
     if (errors.length === 0) {
         let newPublicationsArray = [];
@@ -141,12 +142,16 @@ $('#form').submit(e => {
         
         newPublicationsArray.push(newVehicle);
         localStorage.setItem('newPublicationsArray', JSON.stringify(newPublicationsArray));
+
+        errorsElement.innerHTML = '';
+        document.getElementById('form').reset();
+        swal("¡Vehículo publicado!", "Tu vehículo fue publicado con éxito", "success");
+
     } else {
-        let errorsElement = document.getElementById('errors');
         errorsElement.innerHTML = '';
 
         errors.forEach(error => {
-            errorsElement.innerHTML += `<p>${error}</p>`
+            errorsElement.innerHTML += `<p>${error}</p>`;
         })
 
         errors = [];
